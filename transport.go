@@ -12,7 +12,7 @@ type getcompanyRequest struct {
 }
 
 type getcompanyResponse struct {
-	Result   string `json:"resp"`
+	Result   interface{} `json:"resp"`
 	Err string `json:"err,omitempty"`
 }
 

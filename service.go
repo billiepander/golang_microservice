@@ -2,20 +2,23 @@ package main
 
 import (
 	"errors"
-	"io/ioutil"
 	"fmt"
 	"net/http"
+	"io/ioutil"
+	"github.com/bitly/go-simplejson"
+	"log"
 )
 
 type QxxService interface {
-	Getcompany(string) (string, error)
+	Getcompany(string) (interface{}, error)
 }
 
 type qxxService struct{}
 
 var ErrEmpty = errors.New("empty string")
 
-func (qxxService) Getcompany(s string) (string, error) {
+func (qxxService) Getcompany(s string) (interface{}, error) {
+
 	if s == "" {
 		return "", ErrEmpty
 	}
@@ -29,8 +32,19 @@ func (qxxService) Getcompany(s string) (string, error) {
 	defer resp.Body.Close()
 	body, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
-		return "", ErrEmpty
+		log.Fatalln(err)
 	}
 
-	return string(body), nil
+	js, err := simplejson.NewJson(body)
+	if err != nil {
+		log.Fatalln(err)
+	}
+	data := js.Get("data").Get("Result")
+
+	//for i, v := range data.MustArray(){
+	//	fmt.Println(i)
+	//	fmt.Println(v)
+	//}
+
+	return data, nil
 }
