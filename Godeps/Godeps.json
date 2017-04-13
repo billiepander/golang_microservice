@@ -1,0 +1,49 @@
+{
+	"ImportPath": "github.com/qxxservice",
+	"GoVersion": "go1.7",
+	"GodepVersion": "v79",
+	"Deps": [
+		{
+			"ImportPath": "github.com/bitly/go-simplejson",
+			"Comment": "v0.5.0-4-gda1a892",
+			"Rev": "da1a8928f709389522c8023062a3739f3b4af419"
+		},
+		{
+			"ImportPath": "github.com/go-kit/kit/endpoint",
+			"Comment": "v0.4.0-30-gd0853ee",
+			"Rev": "d0853eec8cfdfc051ef0b6a19f502d6f1d322c33"
+		},
+		{
+			"ImportPath": "github.com/go-kit/kit/log",
+			"Comment": "v0.4.0-30-gd0853ee",
+			"Rev": "d0853eec8cfdfc051ef0b6a19f502d6f1d322c33"
+		},
+		{
+			"ImportPath": "github.com/go-kit/kit/transport/http",
+			"Comment": "v0.4.0-30-gd0853ee",
+			"Rev": "d0853eec8cfdfc051ef0b6a19f502d6f1d322c33"
+		},
+		{
+			"ImportPath": "github.com/go-logfmt/logfmt",
+			"Comment": "v0.3.0",
+			"Rev": "390ab7935ee28ec6b286364bba9b4dd6410cb3d5"
+		},
+		{
+			"ImportPath": "github.com/go-stack/stack",
+			"Comment": "v1.5.2",
+			"Rev": "100eb0c0a9c5b306ca2fb4f165df21d80ada4b82"
+		},
+		{
+			"ImportPath": "github.com/kr/logfmt",
+			"Rev": "b84e30acd515aadc4b783ad4ff83aff3299bdfe0"
+		},
+		{
+			"ImportPath": "golang.org/x/net/context",
+			"Rev": "6036593fc46112539f81fbf802b3b2d631c5c2d4"
+		},
+		{
+			"ImportPath": "golang.org/x/net/context/ctxhttp",
+			"Rev": "3212d39b2e23553a51319ad42bb08ff1eae9f969"
+		}
+	]
+}
