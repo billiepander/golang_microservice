@@ -40,6 +40,7 @@ func (qxxService) Getcompany(s string) (interface{}, error) {
 		log.Fatalln(err)
 	}
 	data := js.Get("data").Get("Result")
+	fmt.Println(data)
 
 	//for i, v := range data.MustArray(){
 	//	fmt.Println(i)
